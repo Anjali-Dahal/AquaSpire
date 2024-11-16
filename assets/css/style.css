@@ -88,7 +88,8 @@ a {
 }
 
 #header {
-    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    background-color: var(--bg);
 }
 
 .nav-links {
@@ -124,7 +125,8 @@ a {
 /* Section Hero */
 #section-hero {
     background: var(--bg);
-    margin: 3rem auto;
+    padding: 3rem 0;
+    margin: 0 auto;
 }
 
 #section-hero .decor svg {
@@ -183,8 +185,31 @@ a {
 }
 
 /* Section Categories */
+#section-category {
+    padding: 4rem 0;
+}
+
 .title-1,
 .title-1 div {
     display: flex;
     align-items: center;
+}
+
+.title-1 div > * {
+    margin-right: 8px;
+}
+
+.title-1 {
+    justify-content: space-between;
+}
+
+.title-1 span {
+    font-weight: 600;
+    color: var(--accent-blue);
+}
+
+.title-2 h2 {
+    font-weight: 600;
+    font-family: var(--header-font);
+    
 }
