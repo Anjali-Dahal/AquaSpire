@@ -4,9 +4,11 @@
     --primary-blue: #303188;
     --accent-blue: #0056D2;
     --navy-blue: #04294E;
-
     --primary-red: #F20F10;
     --accent-red: #EE5D50;
+
+    --card-header-color: #0F2239;
+    --card-bg: #F3F7FB;
 
     --white: #FFFFFF;
     --primary-black: #000000;
@@ -73,13 +75,20 @@ body {
     margin: 0 auto;
 }
 
+header,
+footer,
+section {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
 ul {
     list-style: none;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 a {
@@ -125,7 +134,8 @@ a {
 /* Section Hero */
 #section-hero {
     background: var(--bg);
-    padding: 3rem 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     margin: 0 auto;
 }
 
@@ -134,13 +144,23 @@ a {
 }
 
 #section-hero .decor-1{
-    right: 10%;
+    right: -5%;;
     top: 0;
 }
 
 #section-hero .decor-2 {
     bottom: -50%;
 }
+
+#section-hero .decor-3 {
+    right: 0;
+}
+
+#section-hero .decor-4 {
+    bottom: 10%;
+    right: 10%;
+}
+
 
 #section-hero .row {
     display: grid;
@@ -153,7 +173,7 @@ a {
     margin: 0 auto;
 }
 
-#section-hero .row .col:nth-child(1) {
+#section-hero .row .col {
     position: relative;
 }
 
@@ -186,7 +206,10 @@ a {
 
 /* Section Categories */
 #section-category {
-    padding: 4rem 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-right: 11%;
+    position: relative;
 }
 
 .title-1,
@@ -211,5 +234,258 @@ a {
 .title-2 h2 {
     font-weight: 600;
     font-family: var(--header-font);
+    font-size: var(--h3);
     
+}
+
+#section-category .content {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.cta-category,
+.cta-about,
+.cta-programs {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: var(--small);
+    padding: 12px 24px;
+    background-color: var(--primary-blue);
+    border-radius: 4px;
+    color: var(--white);
+    font-weight: 600;
+    font-family: var(--body-font);
+}
+
+.cta-category svg {
+    fill: var(--white);
+}
+
+#section-category .content .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+}
+
+#section-category .content .card {
+    font-family: var(--body-font);
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 187px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+#section-category .content .card svg {
+    fill: var(--primary-blue);
+}
+
+#section-category .content .card .card-header{
+    padding: 13px;
+    background-color: var(--card-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#section-category .content .card .card-body h5 {
+    font-size: var(--base);
+    font-weight: 600;
+    color: var(--card-header-color);
+}
+
+#section-category .content .card .card-body p {
+    font-size: var(--small);
+    font-weight: 400;
+}
+
+#section-category .content .card .card-footer a {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: var(--small);
+    font-weight: 600;
+}
+
+#section-category .decor .decor-1{
+    position: absolute;
+    top: 19%;
+    z-index: -1;
+}
+
+/* Section Aabout */
+#section-about {
+    margin: 4rem auto;
+}
+
+#section-about .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#section-about .row .col {
+    margin: 0 auto;
+    position: relative;
+}
+
+#section-about .row .col:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#section-about .about-frame {
+    position: absolute;
+    width: 462px;
+    height: 462px;
+    z-index: -1;
+    background-color: white;
+    border: 2px solid #D9D9D9;
+    border-radius: 40px;
+    transform: rotate(260deg);
+}
+
+#section-about .decor svg {
+    position: absolute;
+}
+
+#section-about .decor svg:nth-child(1) {
+    right: -5%;
+    top: -10%;
+}
+
+#section-about .decor svg:nth-child(2) {
+    top: 50%;
+    left: -16%;
+}
+
+#section-about .cta-about {
+    width: fit-content;
+}
+
+#section-about .content p {
+    font-weight: 400;
+    color: var(--accent-black);
+}
+
+/* Section Programs */
+#section-programs {
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+#section-programs .title h2 {
+    font-weight: 600;
+    text-align: center;
+    color: #04294E;
+}
+
+#section-programs .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.card-course {
+    height: 357px;
+    border-radius: 8px;
+    width: 255px;
+    margin: 0 auto;
+    box-shadow: 0px 2px 6px 0px rgba(19, 21, 21, 0.25);
+    position: relative;
+}
+
+.card-course .tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: var(--small);
+    background-color: var(--primary-red);
+    border-radius: 8px 0px 8px 0px;
+    color: var(--white);
+    padding: 0.5rem 1.1rem;
+    font-family: var(--body-font);
+    font-weight: 700;
+}
+
+#section-programs .card-course .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    row-gap: 8px;
+    margin-top: 8px;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--bg);
+}
+
+#section-programs .card-course .category {
+    color: var(--accent-blue);
+    font-family: var(--body-font);
+    font-size: var(--small);
+}
+
+#section-programs .card-course .card-body h3 {
+    font-size: var(--base);
+    font-weight: 600;
+}
+
+#section-programs .card-course .card-body .description {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+}
+
+#section-programs .card-course .description .lessons,
+#section-programs .card-course .description .students{
+    font-size: var(--small);
+}
+
+.card-course .rating {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    font-size: var(--small);
+    font-weight: 400;
+    color: #4D5765;
+}
+
+#section-programs .card-course .card-footer {
+    padding: 0 1rem;
+    margin: 1rem 0;
+}
+
+#section-programs .card-footer .prices {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+}
+
+#section-programs .card-course .card-footer .original {
+    text-decoration: line-through;
+    color: var(--accent-red);
+    font-weight: 400;
+    font-size: var(--small);
+}
+
+#section-programs .card-course .card-footer .discounted {
+    font-size: var(--base);
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.cta-programs {
+    width: fit-content;
+    margin: 0 auto;
 }
